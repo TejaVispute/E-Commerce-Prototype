@@ -3,7 +3,7 @@ import { useCartProcuctContext } from "../Context/CartProductsContext";
 
 const Cart = () => {
     let { cartItem, setCartItem } = useCart();
-    let { cartProcuct, setCartProduct } = useCartProcuctContext();
+    let { cartProduct } = useCartProcuctContext();
 
     // console.log(cartProcuct);
 
@@ -11,7 +11,7 @@ const Cart = () => {
         <>
             <h1>Items in cart are {cartItem}</h1>
             <div style={{ display: "flex", justifyContent: "center" }}>
-                {cartProcuct.map((currItem) => (
+                {cartProduct.map((currItem) => (
                     <div className="Product-cart" style={{ width: "50%" }}>
                         <div className="mobile">{currItem.mobile}</div>
                         <div style={{ width: "100%" }}>
@@ -24,6 +24,7 @@ const Cart = () => {
                                 className="btn btn-secondary mx-1">+</button>
                             <button onClick={() => setCartItem((prev) => prev - 1)}
                                 className="btn btn-secondary mx-1">-</button>
+                                <button className="btn btn-secondary mt-3">Remove from cart</button>
                         </div>
                     </div>
                 ))}

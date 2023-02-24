@@ -4,7 +4,7 @@ let CreateCart = createContext();
 
 function CreateCartProvider({ children }) {
     let [cartItem, setCartItem] = useState(0);
-    
+
     if (cartItem < 0) {
         setCartItem(0);
     }

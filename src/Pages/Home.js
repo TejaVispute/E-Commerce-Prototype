@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     let { Data } = useData();
     return (
-        <div className="cardContainer">
+        // This is home page of cards
+        <div className="cardContainer" >
             {
                 Data.map((e) => {
                     let url = `/productdetails/${e.mobile}`;

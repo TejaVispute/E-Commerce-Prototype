@@ -24,7 +24,15 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/cart' element={<Cart />}></Route>
+
+
+        <Route path='/cart' element={
+          <CheckAuth isLogIn={isLogIn}>
+            <Cart />
+          </CheckAuth>
+        }></Route>
+
+
         <Route path='/login' element={<Login />}></Route>
         <Route path='/productdetails/:dataID' element={
           <CheckAuth isLogIn={isLogIn}>

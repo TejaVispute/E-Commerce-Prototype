@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Login() {
   return (
-    <h1>Please Login karo  bro tabhi dikhata</h1>
+    <h1>Please Login kr bho tevach dishin</h1>
   )
 }
